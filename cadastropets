@@ -1,0 +1,25 @@
+package pkg1.pkg10.cfi027;
+public class CadastrodePets {
+ 
+    public static void main(String[] args) {
+            Pets dog = new Pets();
+            dog.setNome("Amora");
+            dog.setPelagem("Marrom");
+            dog.setRaca("Siames");
+            dog.setIdade(9);
+            
+            Pets gato = new Pets(5,"BErlioz","gato","siames","marrom",5)
+                    ArrayList<Pets> listaPets = new ArrayList();
+                    
+    listaPets.add(dog);
+    listaPets.add(gato);
+    for(Pets p: listaPets){
+    String NomeAnimal = p.getNome();
+    int idadeAnimal = p.getIdade();
+        System.out.println(nomeAnimal);
+        System.out.println(idadeAnimal);
+        soma = soma + p.getIdade();
+        
+}
+    System.out.printf("Media %d\n", soma/listaPets.size());
+}
