@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cfi027_exerc2_9300;
+
+/**
+ *
+ * @author Alunos
+ */
+public class produtos {
+       private int cod;
+        String desc;
+        float preco;
+        int qtd;
+        int estoquemin;
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
+    public int getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
+    }
+
+    public int getEstoquemin() {
+        return estoquemin;
+    }
+
+    public void setEstoquemin(int estoquemin) {
+        this.estoquemin = estoquemin;
+    }
+
+    public produtos() {
+    }
+
+    public produtos(int cod, String desc, float preco, int qtd, int estoquemin) {
+        this.cod = cod;
+        this.desc = desc;
+        this.preco = preco;
+        this.qtd = qtd;
+        this.estoquemin = estoquemin;
+    }
+
+        void comprar() {
+            if (qtd < estoquemin) {
+                System.out.printf("Comprar %d unidades\n",estoquemin - qtd);
+            } else System.out.printf("Estoque suficiente\n");
+        }
+        
+        void vender(int unidade) {
+            if (unidade <= qtd) {
+                qtd -= unidade;
+                System.out.printf("%d Produtos comprados\n",unidade);
+            } else System.out.printf("Quantidade insuficiente no estoque\n");
+}
+}
